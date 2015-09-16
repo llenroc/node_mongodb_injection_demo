@@ -1,0 +1,33 @@
+<!doctpye html>
+<html>
+
+<body>
+  <script src="jquery-2.1.3.min.js"></script>
+  <script>
+    function modifyDoc() {
+      var id = document.getElementById('id').value,
+        token = document.getElementById('token').value;
+      $.ajax("/api/doc/" + id, {
+        data: JSON.stringify({
+          token: token
+        }),
+        type: "put",
+        contentType: "application/json",
+        complete: function (xhr, status) {
+          $('#status').text(status);
+          $('#output').text(xhr.responseText);
+        }
+      });
+    }
+  </script>
+  <label>id</label>
+  <input type="text" name="id" id="id" value='1'>
+  <label>token</label>
+  <input type="text" name="token" id="token" value='XKCD7999'>
+  <button onclick="modifyDoc()">Modify</button>
+  <div>Status: <span id="status"></span>
+  </div>
+  <div id="output"></div>
+</body>
+
+</html>
