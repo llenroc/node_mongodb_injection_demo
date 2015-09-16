@@ -1,0 +1,26 @@
+{
+  "name": "node_mongodb_injection_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "express-validator": "^2.9.0",
+    "mongodb": "^2.0.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tisztamo/node_mongodb_injection_demo.git"
+  },
+  "author": "Krisztian Schaffer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tisztamo/node_mongodb_injection_demo/issues"
+  },
+  "homepage": "https://github.com/tisztamo/node_mongodb_injection_demo#readme"
+}
